@@ -16,6 +16,7 @@ import bookmarksView from './views/bookmarksView';
 
 const getRecipes = async function () {
   try {
+    console.log('Recipe');
     let id = location.hash.slice(1);
 
     if (model.state.bookmarksList.length != 0)
