@@ -1,3 +1,3 @@
 # FORKIFY - RECIPE APPLICATION
 
-Note: Detailed documentation to be added soon. (E.T 15th April 23)
+Note: 'Current netlify version does not work due to issue with parcel and fractional' ~ To be resolved
