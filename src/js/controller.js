@@ -1,6 +1,5 @@
 import 'core-js';
 import 'regenerator';
-import { Fraction } from 'fractional';
 import { API_URL } from './config';
 import * as icons from '../img/icons.svg';
 
@@ -16,7 +15,7 @@ import bookmarksView from './views/bookmarksView';
 
 const getRecipes = async function () {
   try {
-    console.log('Recipe');
+    // console.log('Recipe');
     let id = location.hash.slice(1);
 
     if (model.state.bookmarksList.length != 0)
