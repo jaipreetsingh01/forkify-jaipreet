@@ -20,7 +20,7 @@ const getRecipes = async function () {
 
     if (model.state.bookmarksList.length != 0)
       bookmarksView.render(model.state.bookmarksList);
-    else bookmarksView.renderError();
+    else bookmarksView.renderError('');
 
     if (!id) return;
 
@@ -36,7 +36,7 @@ const getRecipes = async function () {
 
     recipeView.render(recipe);
   } catch (err) {
-    recipeView.renderError();
+    recipeView.renderError(err);
   }
 };
 
@@ -48,13 +48,13 @@ const searchRecipes = async function () {
     resultsView.renderSpinner();
 
     //prettier-ignore
-    await model.searchRecipe(query, pageNo = 1);
+    await model.searchRecipe(query, 1);
     // console.log(model.state);
     resultsView.render(model.state);
     paginationView.render(model.state);
     // model.updateServings(1);
   } catch (err) {
-    resultsView.renderError();
+    resultsView.renderError(err);
   }
 };
 
@@ -81,7 +81,7 @@ const bookmarkCurrentRecipe = function () {
 
   if (model.state.bookmarksList.length != 0)
     bookmarksView.render(model.state.bookmarksList);
-  else bookmarksView.renderError();
+  else bookmarksView.renderError('');
 
   recipeView.render(model.state.recipe);
 };

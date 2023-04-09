@@ -25,8 +25,8 @@ export default class View {
     this._parentElement.insertAdjacentHTML('beforeend', html);
   }
 
-  renderError() {
-    console.log('Error Generated');
+  renderError(err) {
+    // console.error(err);
     const html = `
         <div class="error">
             <div>
